@@ -42,14 +42,14 @@ namespace FunctionApp1
     {
         public string Id { get; set; }
         public string Country { get; set; }
-        [OpenApiPropertyDescription("The request object for MySubmittedData class")]
+        [OpenApiProperty(Description = "The request object for MySubmittedData class")]
         public MyRequest Request { get; set; }
 
         public record MyRequest
         {
-            [OpenApiPropertyDescription("The person's name")]
+            [OpenApiProperty(Description = "The person's name")]
             public string Name { get; set; }
-            [OpenApiPropertyDescription("The person's address")]
+            [OpenApiProperty(Description = "The person's address")]
             public string Address { get; set; }
         }
 
@@ -64,14 +64,14 @@ namespace FunctionApp1
     {
         public long Number { get; set; }
         public string Criteria { get; set; }
-        [OpenApiPropertyDescription("The request object for YourSubmittedData class")]
+        [OpenApiProperty(Description ="The request object for YourSubmittedData class")]
         public MyRequest2 Request { get; set; }
 
         public record MyRequest2
         {
-            [OpenApiPropertyDescription("The person's vehicle name")]
+            [OpenApiProperty(Description = "The person's vehicle name")]
             public string Vehicle { get; set; }
-            [OpenApiPropertyDescription("The person's policy number")]
+            [OpenApiProperty(Description = "The person's policy number")]
             public string PolicyNumber { get; set; }
         }
 
